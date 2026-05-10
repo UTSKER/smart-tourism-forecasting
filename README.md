@@ -157,19 +157,19 @@ Key findings from EDA:
 
 ### Statistical Models
 
-| Model       | Description                                             | Seasonal | Exogenous |
-| ----------- | ------------------------------------------------------- | -------- | --------- |
-| **AR**      | Autoregressive — uses past observations                 | ❌       | ❌        |
-| **MA**      | Moving Average — uses past forecast errors              | ❌       | ❌        |
-| **ARMA**    | Combination of AR and MA                                | ❌       | ❌        |
-| **ARIMAX**  | ARMA with exogenous variables                           | ❌       | ✅        |
-| **SARIMAX** | ARIMAX with explicit weekly seasonal components (s=7)   | ✅       | ✅        |
+| Model       | Description                                             |
+| ----------- | ------------------------------------------------------- |
+| **AR**      | Autoregressive — uses past observations                 | 
+| **MA**      | Moving Average — uses past forecast errors              | 
+| **ARMA**    | Combination of AR and MA                                | 
+| **ARIMAX**  | ARMA with exogenous variables                           | 
+| **SARIMAX** | ARIMAX with explicit weekly seasonal components (s=7)   |      
 
 ### Deep Learning Models
 
 | Model              | Architecture                          | Window Size |
 | ------------------ | ------------------------------------- | ----------- |
-| **LSTM**           | 2 layers (64, 32 units)               | 14 days     |
+| **LSTM**           | 2 layers (64, 32 units)               | 21 days     |
 | **Simple RNN**     | 1 layer (64 units)                    | 21 days     |
 | **GRU + Attention**| 2 layers (128, 64 units)              | 21 days     |
 | **TCN**            | Kernel=3, Dilations=[1,2,4,8,16]      | —           |
@@ -193,7 +193,7 @@ Key findings from EDA:
 | MA              | MA(6)        | 5961.02  | 7543.40  | 8.01%    | 5986.83  | 8011.79   | 7.15%     |
 | ARMA            | ARMA(7,6)    | 3783.02  | 4772.40  | 5.12%    | 2455.83  | 3163.81   | 2.98%     |
 | ARIMAX          | (7,0,6)      | 3648.63  | 4525.25  | 5.03%    | 2834.69  | 3484.10   | 3.49%     |
-| **SARIMAX** ✅  | (6,0,6)(1,1,1,7) | **3552.09** | **4538.21** | **4.88%** | **1921.92** | **2557.89** | **2.38%** |
+| **SARIMAX**  | (6,0,6)(1,1,1,7) | **3552.09** | **4538.21** | **4.88%** | **1921.92** | **2557.89** | **2.38%** |
 
 ### Deep Learning Models
 
